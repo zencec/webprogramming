@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Iframe</title>
+<style>
+table{
+border-collapse:collapse;
+}
+th{
+text-align:center;
+}
+
+</style>
+</head>
+<body>
+
+    <table width="100%" height="500" border="1" >
+        <tr>
+        <th colspan="2"><h1> Nature Items</h1></th>
+        </tr>
+        
+        <td width = "25%">
+            <h3>Categories</h3>
+            <a href="fruit.html" target="displayFrame">Fruits</a>
+            <br><br>
+            <a href="vegetable.html" target="displayFrame">Vegetables</a>
+             <br><br>
+            <a href="tree.html" target="displayFrame">Trees</a>
+             <br><br>
+            <a href="flowers.html" target="displayFrame">Flowers</a>
+        </td>
+        <td width="75%">
+            <iframe name="displayFrame"
+            src="welcome.html"
+            width="75%"
+            height="450"
+            frameborder="0">
+            </iframe>
+         </td>
+        </tr>
+    </table>
+</body>
+</html>
