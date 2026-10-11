@@ -19,6 +19,6 @@ border:2px solid;
 {
 background-color:lightgreen;
 }
-p{
+p.group-selector{
 background-color:magenta;
 }
