@@ -1,166 +1,61 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HTML Image Map - Tree</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f8f0;
-        }
-
-        h1, h2 {
-            color: darkgreen;
-        }
-
-        #tree {
-            width: 490px;
-            height: 600px;
-        }
-
-        .details {
-            width: 80%;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border: 2px solid green;
-            border-radius: 10px;
-        }
-
-        .partImage {
-            width: 250px;
-            max-height: 250px;
-            object-fit: contain;
-        }
-
-        /* Hide all information sections */
-        .info {
-            display: none;
-        }
-
-        /* Display the selected information section */
-        .info:target {
-            display: block;
-        }
-    </style>
+<title>Image Map</title>
+<style>
+    body{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .info {
+        display: none;
+        text-align: center;
+    }
+    .info:target {
+        display: block;
+    }
+</style>
 </head>
-
 <body>
 
-    <h1>HTML Image Map</h1>
+<h1>Image Map</h1>
+<p>Click on the tree parts to view details.</p>
 
-    <p>Click on the roots, trunk, branches, or leaves to view their details.</p>
+<img src="https://treenewal.com/wp-content/uploads/2020/11/oak-tree-care.png"
+width="490" height="600" usemap="#tree">
 
-    <!-- Tree Image -->
-    <img src="/home/s1mcabatch2/Desktop/zv/cycle03/images/Tree.jpeg"
-         alt="Tree"
-         id="tree"
-         usemap="#treemap"
-         width="490"
-         height="600">
+<map name="tree">
+<area shape="circle" coords="250,100,75" href="#leaves">
+<area shape="rect" coords="220,200,280,400" href="#trunk">
+<area shape="poly" coords="180,190,220,160,260,180,330,165,360,190,300,210,250,220,200,215" href="#branches">
+<area shape="poly" coords="210,390,280,390,330,440,430,490,380,530,300,500,250,590,200,560,150,590,110,530,70,490,150,440" href="#roots">
+</map>
 
-    <!-- Image Map -->
-    <map name="treemap">
+<div id="leaves" class="info">
+<h2>Leaves</h2>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxcIawZBgKzYi0BvVF5xFK0UyQk_DyxII-kLNr3Tf8pg&s=10" width="250">
+<p>Leaves prepare food through photosynthesis. They absorb sunlight and exchange gases.</p>
+</div>
 
-        <!-- Leaves -->
-        <area shape="circle"
-              coords="250,100,75"
-              href="#leaves"
-              alt="Leaves">
+<div id="trunk" class="info">
+<h2>Trunk</h2>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbk535iUVw_uzWQT8cQ5BnUBxEU3j4FW4YI_P1Go2LvQ&s=10" width="250">
+<p>The trunk supports the tree, holds its branches upright, and transports water and nutrients.</p>
+</div>
 
-        <!-- Trunk -->
-        <area shape="rect"
-              coords="220,200,280,400"
-              href="#trunk"
-              alt="Trunk">
+<div id="branches" class="info">
+<h2>Branches</h2>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIYx2nGRoEuXWGoGR3_lS8ruvFYDFbcASmU5-uI1Xb8A&s=10" width="250">
+<p>Branches support the leaves, flowers, and fruits. They help transport water and nutrients.</p>
+</div>
 
-        <!-- Branches -->
-        <area shape="poly"
-              coords="180,190,220,160,260,180,330,165,360,190,300,210,250,220,200,215"
-              href="#branches"
-              alt="Branches">
-
-        <!-- Roots -->
-        <area shape="poly"
-              coords="210,390,280,390,330,440,430,490,380,530,300,500,250,590,200,560,150,590,110,530,70,490,150,440"
-              href="#roots"
-              alt="Roots">
-
-    </map>
-
-
-
-
-
-    <!-- Leaves Information -->
-    <div class="details info" id="leaves">
-
-        <h2>Leaves</h2>
-
-        <img class="partImage"
-             src="/home/s1mcabatch2/Desktop/zv/cycle03/images/leaves.jpeg"
-             alt="Leaves">
-
-        <p>
-            Leaves prepare food through photosynthesis.
-            They absorb sunlight and exchange gases.
-        </p>
-
-    </div>
-
-
-    <!-- Trunk Information -->
-    <div class="details info" id="trunk">
-
-        <h2>Trunk</h2>
-
-        <img class="partImage"
-             src="/home/s1mcabatch2/Desktop/zv/cycle03/images/trunk.jpeg"
-             alt="Trunk">
-
-        <p>
-            The trunk supports the tree, holds its branches upright,
-            and transports water and nutrients.
-        </p>
-
-    </div>
-
-
-    <!-- Branches Information -->
-    <div class="details info" id="branches">
-
-        <h2>Branches</h2>
-
-        <img class="partImage"
-             src="/home/s1mcabatch2/Desktop/zv/cycle03/images/branches.jpeg"
-             alt="Branches">
-
-        <p>
-            Branches support the leaves, flowers, and fruits.
-            They help transport water and nutrients.
-        </p>
-
-    </div>
-
-
-    <!-- Roots Information -->
-    <div class="details info" id="roots">
-
-        <h2>Roots</h2>
-
-        <img class="partImage"
-             src="/home/s1mcabatch2/Desktop/zv/cycle03/images/roots.jpeg"
-             alt="Roots">
-
-        <p>
-            Roots anchor the tree in the soil, absorb water and minerals,
-            and may store food.
-        </p>
-
-    </div>
+<div id="roots" class="info">
+<h2>Roots</h2>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7i96r-7o1VCa8cyGR9mAu-_atJspBoQNbwd-Nl08Kpg&s=10" width="250">
+<p>Roots anchor the tree in the soil, absorb water and minerals, and may store food.</p>
+</div>
 
 </body>
 </html>
-
