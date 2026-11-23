@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Over Event</title>
+</head>
+<body>
+
+    <h2>Mouse Over Event Demonstration</h2>
+
+    <div onmouseover="changeContent()">
+        <h3 id="heading">Welcome to JavaScript</h3>
+        <img id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCWNh-nddviFZU9o6h8xIfeMOXdv1hg4ur6QH2T0yyYA&s=10"
+             width="200" height="150">
+        <p id="message">Move the mouse over this content.</p>
+    </div>
+
+    <script>
+        function changeContent()
+        {
+            document.getElementById("heading").innerHTML =
+            "Beautiful Nature";
+
+            document.getElementById("myImage").src =
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEJAzu5aTrvg0yPTkww7slPkkHuIjxHKsxRnF6YOnvsQ&s=10";
+
+            document.getElementById("message").innerHTML =
+            "Enjoy the beauty of nature!";
+        }
+    </script>
+
+</body>
+</html>
